@@ -1,8 +1,8 @@
 # Linear-Data-Structure-Visualization
 Linear Data Structure Visualization - Stack,Queue,LinkedList
 # INTRODUCTION
-In this project, visualization of data structure operations like Push, Pop are showed up visually.
-It helps to teach visually instead of using common pen and paper to explain the opearaitons of stack, queue and Linked List.
+In this project, visualization of data structure operations like Push, Pop are showed up visually.<br>
+It helps to teach visually instead of using common pen and paper to explain the opearaitons of stack, queue and Linked List.<br>
 The aim of the proposed system is to overcome the problem of proper animations. 
 # Technology Used
 Java
