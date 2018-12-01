@@ -1,0 +1,104 @@
+import java.applet.*;
+import java.awt.*;
+
+@SuppressWarnings("serial")
+public class Traj extends Applet implements Runnable {
+
+    int x_pos = 50; // x - Position des Balles
+	int y_pos = 300; // y - Position des Balles
+	int length = 20;
+	int breadth = 20;
+	Thread th;
+
+	public void start() {
+
+		Thread th = new Thread(this);
+		th.start();
+
+	}
+
+	/*
+	 * void mysuspend() { suspendFlag=true; } synchronized void myresume() {
+	 * suspendFlag=false; notify(); }
+	 */
+
+	public void run() {
+
+		Thread.currentThread().setPriority(Thread.MIN_PRIORITY);
+
+		while (true) {
+			if (x_pos == 50)
+
+				y_pos--;
+
+	
+			 if(y_pos==100)
+			  {
+				  suspend1();
+			  }
+				repaint();
+			try {
+				Thread.sleep(20);
+
+			} catch (InterruptedException ex) {
+				// do nothing
+			}
+
+			Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
+		}
+	}
+	
+	void suspend1()
+	{
+	   while(true)
+	   {
+		x_pos++;
+		if(x_pos==170)
+		{
+			suspend2();
+		
+		}
+		repaint();
+		try {
+			Thread.sleep(20);
+
+		} catch (InterruptedException ex) {
+			// do nothing
+		}
+		} 
+		}	
+	
+	void suspend2()
+	{
+	   while(true)
+	   {
+		y_pos++;
+		if(y_pos==360)
+		{
+			stop();
+		
+		}
+		repaint();
+		try {
+			Thread.sleep(20);
+
+		} catch (InterruptedException ex) {
+			// do nothing
+		}
+		} 
+		}	
+
+	@SuppressWarnings("deprecation")
+	public final  void stop() {
+		th.stop();
+		repaint();
+		
+	}
+
+	public void paint(Graphics g) {
+		g.setColor(Color.red);
+
+		g.drawRect(x_pos - length, y_pos - breadth, 2 * length, 2 * breadth);
+	}
+
+}

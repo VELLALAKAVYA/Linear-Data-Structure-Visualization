@@ -1,0 +1,54 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.*;
+
+
+@SuppressWarnings("serial")
+public class Stac extends Applet implements ActionListener,ItemListener
+{
+  String msg="  ";
+  Button b1,b2;
+  TextArea t0;
+  int a=5;
+  public void paint(Graphics g)
+  {
+		g.drawRect(50,300,20,20);
+		g.drawLine(150,400,150,200);
+		g.drawLine(150,400,200,400);
+		g.drawLine(200,400,200,200);
+	   }	
+  public void init()
+  {
+    setLayout(new FlowLayout(FlowLayout.LEFT));
+	b1=new Button("Features");
+	add(b1);
+	b1.addActionListener(this);	
+	 b2=new Button("Enter");
+	   add(b2);
+	   b2.addActionListener(this);
+  }
+  public void actionPerformed(ActionEvent e)
+  {
+    if(e.getSource()==b1)
+	{
+	   t0=new TextArea(5,40);
+	   add(t0);
+	   t0.setText("Size of Stack is:10\nNuber of elements are present are:");
+	
+	}
+    
+    if(e.getSource()==b2)
+    {
+    	
+    }
+  }
+    
+  public void itemStateChanged(ItemEvent e)
+  {  
+	repaint();
+  }
+}  
+ 	
+    
+	
+
