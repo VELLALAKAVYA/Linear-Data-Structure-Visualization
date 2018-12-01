@@ -10,8 +10,8 @@ Swings
 UML Diagrams
 # Explanation
 This visualization tool allows students to see how an element is inserted into, or deleted form data structures. This tool gives an effective supplement to the traditional classromm education and textbooks for learning data structures.<br>
-a. Provides complete visualization for the widely used data structures such as stack, queue and circular queue which is limited to this project.<br>
-b. Provides the animation of common operations associated with the data structures, such as inserting an element into and deleting an element from stack, queue and circular queue.
+  a. Provides complete visualization for the widely used data structures such as stack, queue and circular queue which is limited to this project.<br>
+  b. Provides the animation of common operations associated with the data structures, such as inserting an element into and deleting an element from stack, queue and circular queue.
 # Program Visualization Process
 1. Lexical Analysis : Converts sequence of characters into sequence of tokens.Lex is a tool for generating scanners.
 2. Syntax Analysis : The output of lexical analyser is used to represent grammaticla structure of tokens. This analysis also called parsing.
